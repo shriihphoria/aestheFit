@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 17% 95%; /* #F4F2F0 Soft off-white */
+    --foreground: 0 0% 20%; /* Dark gray for text */
+
+    --card: 40 17% 97%; /* Slightly lighter than background for cards */
+    --card-foreground: 0 0% 20%;
+
+    --popover: 40 17% 97%;
+    --popover-foreground: 0 0% 20%;
+
+    --primary: 0 16% 71%; /* #C3A4A4 Muted Rose */
+    --primary-foreground: 0 0% 10%; /* Dark text for Muted Rose */
+
+    --secondary: 285 10% 88%; /* Lighter version of Dusty Lavender or a complementary neutral */
+    --secondary-foreground: 0 0% 20%;
+
+    --muted: 40 10% 90%; /* Lighter gray for muted text/elements */
+    --muted-foreground: 0 0% 45.1%; /* Default muted foreground */
+
+    --accent: 285 10% 62%; /* #A992AA Dusty Lavender */
+    --accent-foreground: 0 0% 10%; /* Dark text for Dusty Lavender */
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 40 10% 88%; /* Subtle border, harmonizing with background */
+    --input: 40 10% 92%; /* Input background, slightly different from main bg */
+    --ring: 0 16% 71%; /* Muted Rose for focus rings */
+
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+
+    /* Sidebar colors adjusted to match the new theme */
+    --sidebar-background: 40 10% 92%; /* Slightly darker than main bg, but still light */
+    --sidebar-foreground: 0 0% 20%;
+    --sidebar-primary: 0 16% 71%; /* Muted Rose */
+    --sidebar-primary-foreground: 0 0% 10%;
+    --sidebar-accent: 285 10% 62%; /* Dusty Lavender */
+    --sidebar-accent-foreground: 0 0% 10%;
+    --sidebar-border: 40 10% 80%;
+    --sidebar-ring: 0 16% 71%; /* Muted Rose */
+  }
+
+  .dark {
+    /* Keeping existing dark mode structure, but values might need specific dark theme design if required */
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%; /* Corresponds to light primary foreground */
+    --primary-foreground: 0 0% 9%; /* Corresponds to light primary */
+
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+
+    --accent: 285 10% 20%; /* Darker Dusty Lavender */
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 16% 40%; /* Darker Muted Rose */
+
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 0 16% 60%; /* Adjusted Muted Rose for dark sidebar */
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 285 10% 30%; /* Adjusted Dusty Lavender for dark sidebar */
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 0 16% 50%; /* Adjusted Muted Rose for dark sidebar ring */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    /* font-family removed as it's handled by next/font in layout.tsx */
+  }
+}
